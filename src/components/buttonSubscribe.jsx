@@ -1,12 +1,19 @@
 import { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Button() {
     const [subscribe, setSubcribe] = useState(false)
   return (
-    <div>
+    <>
       <button
-        onClick={() => setSubcribe(!subscribe)}    
+        onClick={() => {
+            toast.success("felicidades, ya estas suscrito")
+            setSubcribe(!subscribe)
+
+
+        }}    
     >
         
         {
@@ -14,7 +21,9 @@ function Button() {
         }
         
         </button>
-    </div>
+        <ToastContainer/>
+
+    </>
   );
 }
 

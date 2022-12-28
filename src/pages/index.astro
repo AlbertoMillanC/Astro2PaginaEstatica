@@ -1,15 +1,29 @@
 ---
 import Layout from "../Layouts/Layout.astro";
 import Button from "../components/buttonSubscribe";
+import { ToastContainer, toast } from "react-toastify";
+import "../styles/Layout.css";
+
+//components
+import Hero from "../components/landing/Hero.astro";
+import About from "../components/landing/About.astro";
+import Features from "../components/landing/Features.astro";
+import More from "../components/landing/More.astro";
+import Projects from "../components/landing/Projects.astro";
 ---
 
-<Layout pageTitle="Pagina Inicial" pageDescription="Pagina poara ofrecer servicios de desarollo de software">
+<Layout
+  pageTitle="Pagina Inicial"
+  pageDescription="Pagina poara ofrecer servicios de desarollo de software"
+>
+  <>	
+    <More />
+    <Hero />
+    <Projects />
+    <About />
+    <Features />
+  </>
 
-	<h1>Bienvenidos</h1>
-	<Button  client:load/>
-
+  <Button client:visible />
+  <ToastContainer client:load />
 </Layout>
-
-
-
-

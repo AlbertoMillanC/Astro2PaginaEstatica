@@ -1,32 +1,26 @@
 ---
+import "../styles/Layout.css";
+
 interface Props {
-    pageTitle?: string
-    pageDescription?: string
+  pageTitle?: string;
+  pageDescription?: string;
 }
-const{pageTitle, pageDescription}= Astro.props
-
+const { pageTitle, pageDescription } = Astro.props;
 ---
-
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pageDescription">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={pageDescription} />
     <title>Albero Millán | {pageTitle}</title>
-</head>
-<body>
-    <slot/> 
+  </head>
+  <body>
+    <main class="mx-auto container">
+      <slot />
+    </main>
+  </body>
+</html>
 
-    <style>
-        body {
-            background: #202020;
-            color: white;
-
-
-        }
-    </style>
-</body>
-</html> 

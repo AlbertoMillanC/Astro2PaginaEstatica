@@ -16,14 +16,13 @@ import Projects from "../components/landing/Projects.astro";
   pageTitle="Pagina Inicial"
   pageDescription="Pagina poara ofrecer servicios de desarollo de software"
 >
-  <>	
-    <More />
+  <div>	
     <Hero />
+    <More />
     <Projects />
     <About />
     <Features />
-  </>
+  </div>
 
-  <Button client:visible />
-  <ToastContainer client:load />
+  
 </Layout>

@@ -1,5 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
 import "../styles/Layout.css";
+
 
 interface Props {
   pageTitle?: string;
@@ -20,7 +22,10 @@ const { pageTitle, pageDescription } = Astro.props;
   <body>
     <main class="mx-auto container md:pt-10">
       <slot />
+      <Footer/>
+
     </main>
+
   </body>
 </html>
 

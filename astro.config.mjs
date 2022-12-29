@@ -10,5 +10,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [react(), tailwind()],
   site: 'https://AlbertoMillanC.github.io',
-  base: '/Astro2PaginaEstatica',
+  base: '/Astro_2_pagina_Estatica',
 });
